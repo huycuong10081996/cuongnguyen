@@ -1,0 +1,133 @@
+.footer-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 16px;
+
+    background: url(/images/footer-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* footer left */
+.footer-container-left {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container-left .logo-nordic a>img {
+    height: 100%;
+}
+
+.footer-container-left .social-icons>ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons>ul>li {
+    display: inline-block;
+    padding: 8px 8px;
+}
+
+.social-icons>ul>li>a {
+    color: grey;
+}
+
+/* Tablet */
+@media only screen and (min-width:768px) {
+    .footer-container {
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        padding: 16px;
+    }
+
+    .footer-container-left {
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .footer-container-left .social-icons>ul {
+        padding: 8px 0;
+    }
+}
+
+/* Desktop large */
+@media only screen and (min-width:992px) {
+    .footer-container {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 24px;
+    }
+}
+
+/* footer right */
+.footer-container-right .menu ul.footer-menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.footer-menu>li {
+    padding: 0 8px;
+}
+
+ul.footer-menu>li>a {
+    text-decoration: none;
+    color: grey;
+}
+
+ul.footer-menu>li.recent-page a {
+    color: deeppink;
+}
+
+ul.footer-menu>li:hover a {
+    color: deeppink;
+}
+
+.footer-container-right .descrip p.footer-des {
+    text-align: center;
+    color: grey;
+}
+
+.footer-container-right .descrip p.footer-des>span {
+    cursor: pointer;
+    color: #5ea2ff;
+}
+
+/* Tablet */
+@media only screen and (min-width:768px) {
+    .footer-container-right .menu ul.footer-menu {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .footer-container-right .menu {
+        padding: 8px 0;
+    }
+
+    ul.footer-menu>li {
+        display: inline-block;
+        padding: 0 8px;
+    }
+
+    .footer-container-right .menu ul.footer-menu {
+        margin-left: -8px;
+    }
+}
+
+/* Desktop large */
+@media only screen and (min-width:992px) {
+    .footer-container-right .menu ul.footer-menu {
+        justify-content: flex-end;
+    }
+}

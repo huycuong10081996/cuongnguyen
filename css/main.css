@@ -1,0 +1,47 @@
+/* Global CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Tablet */
+@media only screen and (min-width:768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Desktop large */
+@media only screen and (min-width:992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Desktop extra large */
+@media only screen and (min-width:1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}

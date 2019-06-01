@@ -1,0 +1,261 @@
+/* home background */
+section.home-background.rd-home {
+    background: url(../images/recipes/single-big.jpg);
+    background-position: center;
+}
+
+/* recepies name */
+section.recepies-detail {
+    margin: 48px 0;
+}
+
+section.recepies-detail .recipes-name {
+    margin-bottom: 24px;
+}
+
+.recipes-name .recipes-begin {
+    position: relative;
+    padding-right: 80px;
+    overflow: hidden;
+}
+
+.recipes-name .recipes-begin::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 100px;
+
+    width: 30px;
+    height: 85px;
+
+    background-color: deeppink;
+
+    transform-origin: bottom right;
+    transform: rotate(35deg);
+}
+
+.recipes-name .recipes-begin>p {
+    width: 150px;
+    padding: 8px 24px;
+
+    color: white;
+    background-color: deeppink;
+
+    font-size: .75em;
+}
+
+.detail-title {
+    margin: 16px 0;
+}
+
+.recipes-name .detail-title>h2,
+.detail-title>h6 {
+    color: #836969;
+    font-size: .95em;
+}
+
+/* Tablet */
+@media only screen and (min-width:768px) {
+
+    .recipes-name .detail-title>h2,
+    .detail-title>h6 {
+        font-size: 1em;
+    }
+
+    .recipes-name .recipes-begin {
+        padding-right: 80px;
+    }
+
+    .recipes-name .recipes-begin::after {
+        left: 140px;
+    }
+
+    .recipes-name .recipes-begin>p {
+        width: 180px;
+        font-size: 1em;
+    }
+}
+
+/* recepies detail container */
+.recepies-detail-con {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+/* detail left */
+.recepies-detail-con .detail-left {
+    width: 100%;
+    background-color: #eff3f7;
+}
+
+.detail-left .time-wrapper {
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+.detail-left .time {
+    color: white;
+    background-color: deeppink;
+    width: 185px;
+    position: relative;
+    padding: 16px 36px;
+}
+
+.detail-left .time::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 92px;
+
+    width: 52px;
+    height: 190px;
+
+    background-color: deeppink;
+
+    transform-origin: bottom right;
+    transform: rotate(35deg);
+}
+
+.detail-left .time>p {
+    text-align: left;
+    font-size: .75em;
+}
+
+form.form-main .checkbox-name,
+.checkb {
+    padding: 16px 36px;
+}
+
+.checkb>label:hover {
+    cursor: pointer;
+}
+
+form.form-main .checkbox-name>h2,
+.checkb>label {
+    font-size: .95em;
+}
+
+.form-check>label {
+    position: relative;
+    padding: 0 16px;
+}
+
+.form-check label::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: 1px solid #8e8e8e;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    background-color: white;
+}
+
+.form-check>input[type=checkbox] {
+    opacity: 0;
+}
+
+.form-check>input[type=checkbox]:checked+label::after {
+    content: "";
+    position: absolute;
+
+    left: -8px;
+    top: 3px;
+
+    width: 4px;
+    height: 8px;
+
+    transform: rotate(45deg);
+
+    border-bottom: 2px solid deeppink;
+    border-right: 2px solid deeppink;
+}
+
+/* Tablet */
+@media only screen and (min-width:768px) {
+
+    .detail-left .time {
+        width: 300px;
+    }
+
+    .detail-left .time>p {
+        font-size: 1em;
+    }
+
+    .detail-left .time::after {
+        top: -40px;
+        left: 215px;
+
+        width: 90px;
+    }
+
+    form.form-main .checkbox-name>h2,
+    .checkb>label {
+        font-size: 1em;
+    }
+}
+
+/* Large */
+@media only screen and (min-width:992px) {
+    .recepies-detail-con .detail-left {
+        width: 40%;
+    }
+
+    .detail-left .time {
+        width: 250px;
+    }
+
+    .detail-left .time::after {
+        left: 160px;
+        width: 65px;
+    }
+}
+
+/* detail right */
+.recepies-detail-con .detail-right {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.detail-right .p0 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.detail-right .p0>span {
+    font-size: 20px;
+    font-weight: bolder;
+    width: 10%;
+}
+
+.detail-right .p0>p {
+    padding: 8px 0;
+    width: 89%;
+    font-size: .9em;
+}
+
+/* Tablet */
+@media only screen and (min-width:768px) {
+
+    .detail-right .p0>span {
+        font-size: 24px;
+    }
+
+    .detail-right .p0>p {
+        font-size: 1em;
+    }
+}
+
+/* Large */
+@media only screen and (min-width:992px) {
+    .recepies-detail-con .detail-right {
+        width: 60%;
+        padding: 0 0 0 36px;
+    }
+}

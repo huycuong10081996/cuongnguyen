@@ -1,0 +1,160 @@
+section.recepies {
+    padding: 36px 0px;
+}
+
+section.recepies .lasted-recepies {
+    margin: 0 16px;
+}
+
+section.recepies .lasted-recepies .small-line {
+    height: 8px;
+    width: 80px;
+    margin: 0 -15px;
+
+    -webkit-clip-path: polygon(0 0, 100% 0%, 73% 69%, 0 69%);
+    clip-path: polygon(0 0, 100% 0%, 73% 69%, 0 69%);
+
+    background-color: deeppink;
+}
+
+section.recepies .lasted-recepies>h1,
+section.food-rank .lasted-recepies>h1 {
+    padding: 16px 0;
+    margin: 0 -15px;
+
+    font-weight: bold;
+
+    color: rgb(70, 70, 70);
+}
+
+section.recepies ul.recepies-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+ul.recepies-list>li {
+    width: 100%;
+    padding: 8px 0;
+}
+
+section.pagination {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+section.pagination a {
+    padding: 4px 0px;
+    margin: 5px 5px;
+    border-radius: 4px;
+    width: 8%;
+
+    background-color: rgb(151, 151, 151);
+    color: white;
+
+    font-weight: bold;
+    font-size: 16px;
+
+    text-decoration: none;
+    text-align: center;
+}
+
+section.pagination a.recent-list {
+    background-color: deeppink;
+}
+
+section.pagination a:hover {
+    background-color: deeppink;
+}
+
+/* Tablet */
+@media only screen and (min-width:768px) {
+
+    ul.recepies-list {
+        margin: 0px -8px;
+    }
+
+    ul.recepies-list>li {
+        width: 50%;
+        padding: 8px;
+    }
+
+    section.pagination a {
+        width: 4.5%;
+    }
+
+}
+
+/* Desktop large */
+@media only screen and (min-width:992px) {
+
+    ul.recepies-list>li {
+        width: 33.333333%;
+    }
+
+    section.pagination a {
+        width: 3%;
+    }
+}
+
+ul.recepies-list>li .recepies-item {
+    position: relative;
+}
+
+ul.recepies-list>li .recepies-item>img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.content-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-right: 20px;
+
+    overflow: hidden;
+}
+
+ul.recepies-list>li .recepies-item .content-recepi {
+    position: relative;
+
+    padding: 0px 10px;
+    width: 250px;
+
+    background-color: deeppink;
+}
+
+ul.recepies-list>li .recepies-item .content-recepi::after {
+    content: "";
+    position: absolute;
+
+    bottom: -25px;
+    left: 200px;
+
+    width: 35px;
+    height: 95px;
+
+    background-color: deeppink;
+
+    transform: rotate(35deg);
+    transform-origin: bottom right;
+}
+
+ul.recepies-list>li .recepies-item .content-recepi>p {
+    color: white;
+}
+
+ul.star-rank>li {
+    display: inline-block;
+}
+
+ul.star-rank>li .fas {
+    color: #fbb711;
+}
+
+ul.star-rank>li .far {
+    color: #fbb711;
+}

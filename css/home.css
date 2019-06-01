@@ -1,0 +1,490 @@
+/* home background */
+section.home-background {
+    background: url(../images/slider-bg-2.jpg);
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    height: 500px;
+}
+
+section.home-background>p.title>span {
+    margin: 4px 0;
+    color: white;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .6);
+}
+
+section.home-background>p.title>span {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 8px 16px;
+
+    font-weight: bold;
+}
+
+section.home-background>p.title1>span {
+    background-color: deeppink;
+
+    font-size: 32px;
+
+    transform: rotate(4deg);
+}
+
+
+/* Tablet */
+@media only screen and (min-width:768px) {
+    section.home-background>p.title1>span {
+        font-size: 48px;
+    }
+}
+
+
+section.home-background>p.title2>span {
+    background-color: #ff9933;
+
+    font-size: 24px;
+}
+
+section.home-background>p.title2 {
+    z-index: 2;
+}
+
+/* Tablet */
+@media only screen and (min-width:768px) {
+    section.home-background>p.title2>span {
+        font-size: 36px;
+    }
+}
+
+
+section.home-background>p.title3>span {
+    background-color: rgb(175, 215, 136);
+
+    font-size: 20px;
+}
+
+/* Tablet */
+@media only screen and (min-width:768px) {
+    section.home-background>p.title3>span {
+        font-size: 24px;
+    }
+}
+
+.animate {
+    animation-name: zoomin;
+    animation-duration: .35s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.animate.delay-half {
+    animation-delay: .5s;
+}
+
+.animate.delay-one {
+    animation-delay: 1s;
+}
+
+@keyframes zoomin {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Food rank */
+section.rated {
+    padding: 100px 0;
+    background-color: #eff3f7;
+}
+
+section.rated .rated-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.rated-container .top-rated-recepies,
+.rated-container .most-like-recepies,
+.rated-container .magazine {
+    width: 100%;
+    margin: 8px 0;
+}
+
+/* Tablet */
+@media only screen and (min-width:768px) {
+
+    .rated-container .top-rated-recepies,
+    .rated-container .most-like-recepies {
+        width: 50%;
+    }
+
+    .rated-container .magazine {
+        width: 100%;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width:992px) {
+
+    .rated-container .top-rated-recepies,
+    .rated-container .most-like-recepies,
+    .rated-container .magazine {
+        width: 33.333333%;
+    }
+}
+
+section.rated .recepi-title .lasted-recepies .small-line {
+    height: 8px;
+    width: 80px;
+
+    -webkit-clip-path: polygon(0 0, 100% 0%, 73% 69%, 0 69%);
+    clip-path: polygon(0 0, 100% 0%, 73% 69%, 0 69%);
+
+    background-color: deeppink;
+}
+
+.rated-container ul.list-recepies {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+ul.list-recepies>li {
+    width: 100%;
+}
+
+ul.list-recepies>li>a {
+    text-decoration: none;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 0 -4px;
+}
+
+ul.list-recepies>li>a .img-item {
+    width: 30%;
+    padding: 0 4px;
+}
+
+ul.list-recepies>li>a .img-item>img {
+    width: 100%;
+}
+
+ul.list-recepies>li>a .content-item {
+    width: 70%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    padding: 0 4px;
+}
+
+.content-item>h6 {
+    color: deeppink;
+    font-weight: normal;
+}
+
+.content-item>p {
+    margin: 6px 0;
+    color: rgb(70, 70, 70);
+}
+
+/* magazine */
+.rated-container .magazine {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    background-color: white;
+
+    position: relative;
+
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .3);
+}
+
+.magazine .img-title-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 180px;
+    padding-right: 50px;
+
+    overflow: hidden;
+}
+
+.magazine .day-review {
+    position: relative;
+    width: 100%;
+    background-color: rgb(248, 204, 228);
+}
+
+.magazine .day-review::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 90px;
+
+    width: 30px;
+    height: 70px;
+
+    transform-origin: bottom right;
+    transform: rotate(35deg);
+
+    background-color: deeppink;
+}
+
+.magazine .day-review>p {
+    color: white;
+    background-color: deeppink;
+    padding: 8px 0 8px 24px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.rated-container .magazine>img {
+    width: 100%;
+}
+
+.rated-container .magazine .magazine-content {
+    padding: 24px;
+    height: 50%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.magazine .magazine-content>h4 {
+    color: deeppink;
+}
+
+.magazine-content>p.magazine-p {
+    color: #ccc;
+}
+
+.rated-container .magazine .show-icon {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.rated-container .magazine .show-icon>i {
+    padding: 8px 12px;
+
+    background-color: deeppink;
+    color: #fff;
+}
+
+/* Tablet */
+@media only screen and (min-width:768px) {}
+
+/* Desktop */
+@media only screen and (min-width:992px) {
+    .magazine .day-review::after {
+        left: 90px;
+    }
+}
+
+/* Advertise */
+section.advertise {
+    background-color: #ff9933;
+    padding: 56px 0;
+}
+
+.advertise-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.advertise-container .adv-1,
+.advertise-container .adv-2 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+
+    margin: 16px 0;
+    padding: 24px 0;
+    width: 100%;
+}
+
+.adv-img {
+    width: 50%;
+    position: relative;
+}
+
+.adv-img>img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.adv-img .img-title-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 150px;
+    padding-right: 40px;
+
+    overflow: hidden;
+}
+
+.adv-img .img-title {
+    position: relative;
+    width: 100%;
+}
+
+.adv-img .img-title::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 70px;
+
+    width: 30px;
+    height: 78px;
+
+    transform-origin: bottom right;
+    transform: rotate(35deg);
+
+    background-color: deeppink;
+}
+
+.adv-img .img-title>p {
+    color: white;
+    background-color: deeppink;
+    padding: 8px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.adv-content {
+    width: 100%;
+    padding: 16px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.adv-content>h6 {
+    color: deeppink;
+}
+
+.adv-content>p {
+    font-weight: bold;
+}
+
+.adv-author {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.author-img>img {
+    width: auto;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.adv-author p {
+    width: 50%;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Tablet */
+@media only screen and (min-width:768px) {
+
+    .advertise-container .adv-1,
+    .advertise-container .adv-2 {
+        flex-flow: row wrap;
+        width: 100%;
+        padding: 0;
+    }
+
+    .adv-img {
+        width: 30%;
+    }
+
+    .adv-img .img-title-wrapper {}
+
+    .adv-img>img {
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .adv-content {
+        width: 70%;
+        padding: 0 16px;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    .adv-author {
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+
+    .adv-author .author-img {
+        display: block;
+        width: 10%;
+    }
+
+    .adv-author p {
+        width: 70%;
+        text-align: left;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width:992px) {
+
+    .advertise-container .adv-1,
+    .advertise-container .adv-2 {
+        flex-flow: row nowrap;
+        width: 49.5%;
+        margin: 0;
+    }
+
+    .adv-img {
+        width: 30%;
+    }
+
+    .adv-img .img-title-wrapper {
+        width: 145px;
+    }
+
+    .adv-author .author-img {
+        width: 15%;
+    }
+
+    .adv-img .img-title::after {
+        left: 64px;
+    }
+
+    .author-img>img {
+        width: auto;
+        height: 40px;
+    }
+}
